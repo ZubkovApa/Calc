@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calc
 {
@@ -24,6 +12,8 @@ namespace Calc
             InitializeComponent();
             foreach (UIElement e1 in Buttons.Children)
             {
+                check(Mc); 
+                check(Mr);
                 if (e1 is Button)
                 {
                     ((Button)e1).Click += ButtonClick;
@@ -41,11 +31,11 @@ namespace Calc
 
                 if (textButton == "C") { text.Clear(); }
 
-                else if (textButton == "Mc") { m = 0; }
+                else if (textButton == "Mc") { m = 0; check(Mc); check(Mr); }
 
-                else if (textButton == "Mr") { text.Text = m.ToString(); }
+                else if (textButton == "Mr") { text.Text = m.ToString(); check(Mc); check(Mr); }
 
-                else if (textButton == "Ms") { m = Double.Parse(text.Text); }
+                else if (textButton == "Ms") { m = Double.Parse(text.Text); check(Mc); check(Mr); }
 
                 else if (textButton == "M+") { text.Text = (double.Parse(text.Text) + m).ToString(); }
 
@@ -82,5 +72,11 @@ namespace Calc
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
-    }
+
+        void check(Button M)
+        {
+            if (m == 0) { M.IsEnabled = false; }
+            else { M.IsEnabled = true; }
+        } 
+}
 }

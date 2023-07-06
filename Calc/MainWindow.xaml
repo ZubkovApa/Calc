@@ -33,8 +33,8 @@
         </Grid.RowDefinitions>
 
         <TextBox Name="text" Grid.Row="0" Grid.ColumnSpan="5" FontFamily="Bahnschrift" FontSize="36" Background="#FFF1F0E7" Padding="20,0,20,0" Margin="5,5,3,5" VerticalAlignment="Stretch"/>
-        <Button Grid.Row="1" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch" Content="Mc"></Button>
-        <Button Grid.Row="1" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">Mr</Button>
+        <Button Name ="Mc" Grid.Row="1" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch" Content="Mc"></Button>
+        <Button Name ="Mr" Grid.Row="1" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">Mr</Button>
         <Button Grid.Row="1" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">Ms</Button>
         <Button Grid.Row="1" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">M+</Button>
         <Button Grid.Row="1" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">M-</Button>
