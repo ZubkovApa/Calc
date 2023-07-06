@@ -50,9 +50,9 @@ namespace Calc
 
                 else if (textButton == "Ms") { m = Double.Parse(text.Text); }
 
-                else if (textButton == "M+") { text.Text = (int.Parse(text.Text) + m).ToString(); }
+                else if (textButton == "M+") { text.Text = (double.Parse(text.Text) + m).ToString(); }
 
-                else if (textButton == "M-") { text.Text = (int.Parse(text.Text) - m).ToString(); }
+                else if (textButton == "M-") { text.Text = (double.Parse(text.Text) - m).ToString(); }
 
                 else if (textButton == "🠔") { text.Text = text.Text.Remove(text.Text.Length-1, 1).ToString(); }
 
@@ -68,11 +68,11 @@ namespace Calc
                     }
                 }
 
-                else if (textButton == "x²") { text.Text = (int.Parse(text.Text) * int.Parse(text.Text)).ToString(); }
+                else if (textButton == "x²") { text.Text = (double.Parse(text.Text) * double.Parse(text.Text)).ToString(); }
 
-                else if (textButton == "√") { text.Text = Math.Pow(Double.Parse(text.Text), 0.5).ToString(); }
+                else if (textButton == "√") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 1/2).ToString().Replace(',', '.'); }
 
-                else if (textButton == "1/x") { text.Text = Math.Pow(Double.Parse(text.Text), -1).ToString(); }
+                else if (textButton == "1/x") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), -1).ToString().Replace(',', '.'); }
 
                 else if (textButton == "=") { text.Text = new DataTable().Compute(text.Text, null).ToString().Replace(',','.'); }
 
