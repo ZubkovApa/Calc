@@ -14,9 +14,9 @@ namespace Calc
             {
                 check(Mc); 
                 check(Mr);
-                if (e1 is Button)
+                if (e1 is Button button)
                 {
-                    ((Button)e1).Click += ButtonClick;
+                    button.Click += ButtonClick;
                 }
             }
         }
