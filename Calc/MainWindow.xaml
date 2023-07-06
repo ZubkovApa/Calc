@@ -140,34 +140,34 @@
         <Button Grid.Row="1" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">M+</Button>
         <Button Grid.Row="1" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">M-</Button>
 
-        <Button Grid.Row="2" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">🠔</Button>
-        <Button Grid.Row="2" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">CE</Button>
-        <Button Grid.Row="2" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">C</Button>
-        <Button Grid.Row="2" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">x²</Button>
-        <Button Grid.Row="2" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">√</Button>
+        <Button Grid.Row="2" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">√</Button>
+        <Button Grid.Row="2" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">x²</Button>
+        <Button Grid.Row="2" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">CE</Button>
+        <Button Grid.Row="2" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">C</Button>
+        <Button Grid.Row="2" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">🠔</Button>
 
         <Button Grid.Row="3" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">7</Button>
         <Button Grid.Row="3" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">8</Button>
         <Button Grid.Row="3" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">9</Button>
-        <Button Grid.Row="3" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">/</Button>
-        <Button Grid.Row="3" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">%</Button>
+        <Button Grid.Row="3" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">*</Button>
+        <Button Grid.Row="3" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">/</Button>
 
         <Button Grid.Row="4" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">4</Button>
         <Button Grid.Row="4" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">5</Button>
         <Button Grid.Row="4" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">6</Button>
-        <Button Grid.Row="4" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">*</Button>
-        <Button Grid.Row="4" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">1/x</Button>
+        <Button Grid.Row="4" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">+</Button>
+        <Button Grid.Row="4" Grid.Column="4" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">-</Button>
 
         <Button Grid.Row="5" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">1</Button>
         <Button Grid.Row="5" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">2</Button>
         <Button Grid.Row="5" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Margin="5,5,3,5" VerticalAlignment="Stretch" Background="#FF8499B1">3</Button>
-        <Button Grid.Row="5" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">-</Button>
+        <Button Grid.Row="5" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">%</Button>
         <Button Grid.Row="5" Grid.Column="4" Grid.RowSpan="2" FontFamily="Bahnschrift" FontSize="24" Background="#FF707C80" Margin="5,4,3,5">=</Button>
 
         <Button Grid.Row="6" Grid.Column="0" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">±</Button>
         <Button Grid.Row="6" Grid.Column="1" FontFamily="Bahnschrift" FontSize="24" Margin="1,4,3,5" Background="#FF8499B1">0</Button>
         <Button Grid.Row="6" Grid.Column="2" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">.</Button>
-        <Button Grid.Row="6" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">+</Button>
+        <Button Grid.Row="6" Grid.Column="3" FontFamily="Bahnschrift" FontSize="24" Background="#FF98B1B9" Margin="5,5,3,5" VerticalAlignment="Stretch">1/x</Button>
 
     </Grid>
 </Window>
