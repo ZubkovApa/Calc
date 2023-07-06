@@ -51,7 +51,7 @@ namespace Calc
                     }
                 }
 
-                else if (textButton == "x²") { text.Text = (double.Parse(text.Text) * double.Parse(text.Text)).ToString(); }
+                else if (textButton == "x²") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 2).ToString().Replace(',', '.'); }
 
                 else if (textButton == "√") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 0.5).ToString().Replace(',', '.'); }
 
