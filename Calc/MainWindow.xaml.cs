@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace Calc
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -60,17 +57,13 @@ namespace Calc
                 {
                     for (int i = 0; i < text.Text.Length; i++)
                     {
-                        if (!char.IsNumber(text.Text[text.Text.Length - i - 1])) 
-                        { 
-                            text.Text = text.Text.Remove(text.Text.Length - i, i);
-                            break;
-                        }
+                        if (!char.IsNumber(text.Text[text.Text.Length - i - 1])) { text.Text = text.Text.Remove(text.Text.Length - i, i); break; }
                     }
                 }
 
                 else if (textButton == "x²") { text.Text = (double.Parse(text.Text) * double.Parse(text.Text)).ToString(); }
 
-                else if (textButton == "√") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 1/2).ToString().Replace(',', '.'); }
+                else if (textButton == "√") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 0.5).ToString().Replace(',', '.'); }
 
                 else if (textButton == "1/x") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), -1).ToString().Replace(',', '.'); }
 
@@ -80,16 +73,8 @@ namespace Calc
                 {
                     for (int i = 0; i < text.Text.Length; i++)
                     {
-                        if (text.Text[text.Text.Length - i - 1] == '-') 
-                        { 
-                            text.Text = text.Text.Insert(text.Text.Length - i, "+").Remove(text.Text.Length - i - 1, 1);
-                            break;
-                        }
-                        else if (text.Text[text.Text.Length - i - 1] == '+')
-                        {
-                            text.Text = text.Text.Insert(text.Text.Length - i, "-").Remove(text.Text.Length - i - 1, 1);
-                            break;
-                        }
+                        if (text.Text[text.Text.Length - i - 1] == '-') { text.Text = text.Text.Insert(text.Text.Length - i, "+").Remove(text.Text.Length - i - 1, 1); break; }
+                        else if (text.Text[text.Text.Length - i - 1] == '+') { text.Text = text.Text.Insert(text.Text.Length - i, "-").Remove(text.Text.Length - i - 1, 1); break; }
                     } 
                 }
 
