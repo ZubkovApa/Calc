@@ -60,7 +60,7 @@ namespace Calc
                 {
                     for (int i = 0; i < text.Text.Length; i++)
                     {
-                        if (!char.IsLetter(text.Text[text.Text.Length - i - 1])) 
+                        if (!char.IsNumber(text.Text[text.Text.Length - i - 1])) 
                         { 
                             text.Text = text.Text.Remove(text.Text.Length - i, i);
                             break;
