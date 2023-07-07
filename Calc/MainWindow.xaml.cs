@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,12 +11,12 @@ namespace Calc
     {
         public MainWindow()
         {
+            bool a = true;
             InitializeComponent();
             foreach (UIElement e1 in Buttons.Children)
             {
                 check(Mc); 
                 check(Mr);
-                text.Text = "\nHello";
                 text.IsReadOnly = true;
                 if (e1 is Button button)
                 {
