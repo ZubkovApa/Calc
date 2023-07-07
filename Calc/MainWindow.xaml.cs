@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,13 +11,14 @@ namespace Calc
     {
         public MainWindow()
         {
-            bool a = true;
             InitializeComponent();
             foreach (UIElement e1 in Buttons.Children)
             {
-                check(Mc); 
-                check(Mr);
+                check(one); 
+                check(two);
+                text.Text = "";
                 text.IsReadOnly = true;
+                allButtons = new List<Button>(34) { one, two, three, four, five, six, seven, eight, nine, ten , eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour};
                 if (e1 is Button button)
                 {
                     button.Click += ButtonClick;
@@ -25,7 +26,9 @@ namespace Calc
             }
         }
 
+        public List<Button> allButtons;
         public double m = 0;
+        public bool blk = false;
 
         private void ButtonClick(Object sender, RoutedEventArgs e)
         {
@@ -35,11 +38,11 @@ namespace Calc
 
                 if (textButton == "C") { text.Clear(); }
 
-                else if (textButton == "Mc") { m = 0; check(Mc); check(Mr); }
+                else if (textButton == "Mc") { m = 0; check(one); check(two); }
 
-                else if (textButton == "Mr") { text.Text = m.ToString(); check(Mc); check(Mr); }
+                else if (textButton == "Mr") { text.Text = m.ToString(); check(one); check(two); }
 
-                else if (textButton == "Ms") { m = Double.Parse(text.Text = "\n" + new DataTable().Compute(text.Text, null).ToString().Replace(',', '.')); check(Mc); check(Mr); }
+                else if (textButton == "Ms") { m = Double.Parse(text.Text = "\n" + new DataTable().Compute(text.Text, null).ToString().Replace(',', '.')); check(one); check(two); }
 
                 else if (textButton == "M+") { text.Text = (double.Parse(text.Text) + m).ToString(); }
 
@@ -49,10 +52,19 @@ namespace Calc
 
                 else if (textButton == "CE")
                 {
-                    for (int i = 0; i < text.Text.Length; i++)
+                    bool check = false;
+                    for (int i = 0;  i < text.Text.Length; i++)
                     {
-                        if (!char.IsNumber(text.Text[text.Text.Length - i - 1])) { text.Text = text.Text.Remove(text.Text.Length - i, i); break; }
+                        if (!Char.IsNumber(text.Text[i])) { check = true; }
                     }
+                    if (check)
+                    {
+                        for (int i = 0; i < text.Text.Length; i++)
+                        {
+                            if (!char.IsNumber(text.Text[text.Text.Length - i - 1])) { text.Text = text.Text.Remove(text.Text.Length - i, i); break; }
+                        }
+                    }
+                    else { text.Text = ""; }
                 }
 
                 else if (textButton == "x²") { text.Text = Math.Pow(Double.Parse((text.Text).Replace('.', ',')), 2).ToString().Replace(',', '.'); }
@@ -86,10 +98,24 @@ namespace Calc
                     else { text.Text = text.Text.Insert(0, "-"); }
                 }
 
+                else if (textButton == "OFF") { Application.Current.Shutdown(); }
+
+                else if (textButton == "BLK") 
+                { 
+                    if (blk == true) { blk = false;  block(); }
+                    else { blk = true; block(); }
+                }
+
                 else text.Text += textButton;
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        void block()
+        {
+            foreach (Button button in allButtons) { if (blk == true) { button.IsEnabled = false; blk = true;} else { button.IsEnabled = true; blk = false; check(one); check(two); } }
+        }
+
 
         void check(Button M)
         {
