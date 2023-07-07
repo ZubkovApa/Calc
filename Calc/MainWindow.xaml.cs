@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -99,6 +100,29 @@ namespace Calc
                 }
 
                 else if (textButton == "OFF") { Application.Current.Shutdown(); }
+
+                else if (textButton == "%") {
+                    text.Text = text.Text.Replace("%","").Replace("\n","").Insert(0,"@");
+                    char[] a = Array.Empty<char>(); char[] b= Array.Empty<char>();
+                    int c = 0; int c1 = 0; int c2 = 0;
+                    for (int i = 1; i < text.Text.Length; i++)
+                    {
+                        if (Char.IsNumber(text.Text[text.Text.Length - i])) { Array.Resize(ref a, c1 + 1); a[c1]= text.Text[text.Text.Length - i]; c1++; }
+                        else { c = i; break; }
+                    }
+                    for (int i = c + 1; i < text.Text.Length + 3; i++)
+                    {
+                        if (Char.IsNumber(text.Text[text.Text.Length - i])) { Array.Resize(ref b, c2 + 1); b[c2] = text.Text[text.Text.Length - i]; c2++; }
+                        else { break; }
+                    }
+                    string str1 =""; string str2 = "";
+                    Array.Reverse(a); Array.Reverse(b);
+                    for (int i = 0; i < a.Length; i++) { str1 += a[i].ToString(); }
+                    for (int i = 0; i < b.Length; i++) { str2 += b[i].ToString(); }
+                    double f1 = (Double.Parse(str1)); double f2 = (Double.Parse(str2));
+                    text.Text = "\n" + text.Text.Remove(text.Text.Length - c + 1, c - 1).Replace("@","");
+                    text.Text = text.Text.Insert(text.Text.Length - c + 3, (f1 / 100 * f2).ToString());
+                }
 
                 else if (textButton == "BLK") 
                 { 
